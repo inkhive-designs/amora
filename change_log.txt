@@ -1,0 +1,29 @@
+	
+
+	—————Change Log for AMORA Wordpress Theme————
+
+		v1.0.9	- Initial Release
+
+		v1.1	- 1. Added the Slider 
+			  2. Updated the Screenshot
+
+		v1.1.1	- 1. Fixed a site title color issue
+			  2. Fixed a sidebar layout issue in the customiser settings.
+			  3. Modified the navigation bar
+
+		v1.2	- 1. Added Header Support
+			  2. Adjusted the slider
+			  3. Changed the screenshot
+
+		v1.3	- 1. Fixed some bugs
+			  2. Added two more skins
+
+		v2.0	- Major update with a lot of layout changes
+
+		v2.1.1	- Changed the screenshot
+
+		v2.2	- Revamped the Theme (Major Update)
+
+		v2.2.2	- Changed Slider Layout
+
+		v2.3	- Changed the Theme URI
