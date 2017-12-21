@@ -12,18 +12,21 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area col-lg-8 col-md-8 col-sm-12 col-xs-12">
+	<div id="primary-mono" class="content-area <?php do_action('amora_primary-width') ?> page">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'page' ); ?>
+				<?php get_template_part( 'modules/content/content', 'page' ); ?>
 
 				<?php
+                if( is_front_page() && !get_theme_mod('amora_disable_comments')) :
+
 					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || '0' != get_comments_number() ) :
+					if ( comments_open() || get_comments_number() ) :
 						comments_template();
 					endif;
+            endif;
 				?>
 
 			<?php endwhile; // end of the loop. ?>

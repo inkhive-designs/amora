@@ -13,8 +13,12 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area container">
-		<main id="main" class="site-main col-lg-8 col-md-8 col-sm-12 col-xs-12" role="main">
+	<div id="primary" class="content-areas <?php do_action('amora_primary-width') ?>">
+		<?php if ( is_home() ) : ?>
+			<div class="section-title"><span><?php _e("From the Blog","amora"); ?></span></div> <?php
+		endif; ?>
+		
+		<main id="main" class="site-main <?php do_action('amora_masonry_class') ?>" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -23,15 +27,14 @@ get_header(); ?>
 
 				<?php
 					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
-					get_template_part( 'content', get_post_format() );
+					do_action('amora_blog_layout'); 
+					
 				?>
 
 			<?php endwhile; ?>
 
-			<?php amora_pagination(); ?>
+			<?php //the_posts_pagination( array( 'mid_size' => 2 ));; ?>
 
 		<?php else : ?>
 
@@ -40,6 +43,9 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
+		
+		<?php if ( have_posts() ) { the_posts_pagination(array( 'mid_size' => 2 )); } ?>
+		
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>

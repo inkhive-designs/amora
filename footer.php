@@ -10,44 +10,18 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-	<div id="footer-sidebar" class="widget-area clear container" role="complementary">
-	<?php do_action( 'before_sidebar' ); ?>
-	<?php 
-		if ( is_active_sidebar( 'sidebar-2' ) ) { ?>
-		<div class="footer-column col-lg-3 col-md-3 col-sm-12 col-xs-12"> <?php
-			dynamic_sidebar( 'sidebar-2'); 
-		?> </div> <?php	
-		}
-			
-		if ( is_active_sidebar( 'sidebar-3' ) ) { ?>
-		<div class="footer-columncol-lg-3 col-md-3 col-sm-12 col-xs-12"> <?php
-			dynamic_sidebar( 'sidebar-3'); 
-		?> </div> <?php	
-		}
+	<?php get_sidebar('footer'); ?>
 
-		if ( is_active_sidebar( 'sidebar-4' ) ) { ?>
-		<div class="footer-columncol-lg-3 col-md-3 col-sm-12 col-xs-12"> <?php
-			dynamic_sidebar( 'sidebar-4'); 
-		?> </div> <?php	
-		}
-		
-		if ( is_active_sidebar( 'sidebar-5' ) ) { ?>
-		<div class="footer-columncol-lg-3 col-md-3 col-sm-12 col-xs-12"> <?php
-			dynamic_sidebar( 'sidebar-5'); 
-		?> </div> <?php	
-		}
-		?>	 		
-
-
-	</div>
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'amora' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'amora' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme %1$s by %2$s.', 'amora' ), 'Amora', '<a href="http://divjot.co/" rel="designer">Divjot Singh</a>' ); ?>
+	<footer id="colophon" class="site-footer title-font" role="contentinfo">
+		<div class="site-info container">
+			<?php printf( __( 'Theme Designed by %1$s.', 'amora' ), '<a target="blank" href="'.esc_url("http://inkhive.com/").'" rel="nofollow">InkHive</a>' ); ?>
+			<span class="sep"></span>
+			<?php echo ( get_theme_mod('amora_footer_text') == '' ) ? ('&copy; '.date_i18n( __( 'Y', 'amora' ) ).' '.get_bloginfo('name').__('. All Rights Reserved. ','amora')) : esc_html(get_theme_mod('amora_footer_text')); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
+	
 </div><!-- #page -->
+
 
 <?php wp_footer(); ?>
 

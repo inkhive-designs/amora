@@ -1,0 +1,100 @@
+/* SHOWCASE */
+#showcase {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  .showcase-item {
+    position: relative;
+    padding: 15px 12px;
+    overflow: hidden;
+    perspective: 1000px;
+    .item-container {
+      position: relative;
+      overflow: hidden;
+      padding: 2px;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
+    .image {
+      display: block;
+      overflow: hidden;
+      position: relative;
+      z-index: 99;
+      border-radius: 9px;
+      border: solid 1px darken(@background,14%);
+      &:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border: solid 10px darken(@background,7%);
+        border-radius: 5px;
+        display: block;
+        position: absolute;
+        top: 0;
+        .transform(scale(1););
+        .transition(0.4s all ease);
+
+      }
+    }
+    img {
+      position: relative;
+      .transition(0.4s all ease);
+    }
+    .showcase-caption {
+      position: relative;
+      text-align: center;
+      font-weight: normal;
+      margin-top: 15px;
+      color: @accent;
+      background: @background;
+      .transition(0.4s all ease);
+      opacity: 1;
+      .showcase-title {
+        font-size: 18px;
+        text-transform: uppercase;
+        .transition(0.4s all ease);
+        color: black;
+        font-weight: bold;
+        .title-font;
+        @media screen and (max-width: 767px) {
+          font-size: 18px;
+        }
+      }
+      .showcase-desc {
+        font-size: 14px;
+        color: darken(@top-bar,10%);
+        @media screen and (max-width: 767px) {
+          font-size: 14px;
+          font-weight: normal;
+        }
+        .transition(0.4s all ease);
+      }
+    }
+    &:hover {
+      img {
+        -webkit-filter: brightness(0.6);
+        filter: brightness(0.6);
+        .transform(scale(1.1) translateY(0px));
+
+      }
+      .image {
+        &:after {
+          .transform(scale(0.95) rotate(0deg));
+          border-color: fade(darken(@background,7%), 60%);
+
+
+        }
+      }
+      .showcase-caption {
+        opacity: 1;
+
+      }
+      .showcase-title, .showcase-desc {
+        transform-origin: left;
+      }
+    }
+  }
+
+}
