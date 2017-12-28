@@ -93,11 +93,11 @@ function amora_custom_css_mods() {
 		$custom_css .= "#social-search .searchform, #social-search .searchform:after { background: #".get_background_color()." }";
 	}
 	
-	if ( get_theme_mod('amora_title_font','HIND') ) :
+	if ( get_theme_mod('amora_title_font','Bree Serif') ) :
 		$custom_css .= ".title-font, h1, h2 { font-family: ".esc_html(get_theme_mod('amora_title_font'))."; }";
 	endif;
 	
-	if ( get_theme_mod('amora_body_font','Open Sans') ) :
+	if ( get_theme_mod('amora_body_font','Bitter') ) :
 		$custom_css .= "body { font-family: ".esc_html(get_theme_mod('amora_body_font'))."; }";
 	endif;
 	

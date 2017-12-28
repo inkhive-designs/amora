@@ -15,7 +15,7 @@ $fonts = array_combine($font_array, $font_array);
 $wp_customize->add_setting(
     'amora_title_font',
     array(
-        'default'=> 'HIND',
+        'default'=> 'Bree Serif',
         'sanitize_callback' => 'amora_sanitize_gfont'
     )
 );
@@ -39,7 +39,7 @@ $wp_customize->add_control(
 
 $wp_customize->add_setting(
     'amora_body_font',
-    array(	'default'=> 'Open Sans',
+    array(	'default'=> 'Bitter',
         'sanitize_callback' => 'amora_sanitize_gfont' )
 );
 

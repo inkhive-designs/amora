@@ -1,5 +1,6 @@
 /* -------- Nav Menu ---------- */
 #site-navigation {
+  width: 100% !important;
   display: block;
   text-align: center;
   clear: both;
@@ -12,7 +13,7 @@
       float: none;
       display: inline-block;
       a {
-        padding: 20px 18px;
+        padding: 20px 18px !important;
         color: @onaccent;
         text-transform: uppercase;
         font-weight: 400;
@@ -55,6 +56,7 @@
           border-radius: 0px;
           margin-right: 0px;
           text-transform: none;
+          padding: 16px 12px !important;
         }
         li ul {
           transform-origin: left;
@@ -81,7 +83,9 @@
           transition: 0.4s all ease;
           &:hover {
             transform-origin: left;
-            text-decoration: underline;
+           // text-decoration: underline;
+            text-underline: none;
+
           }
         }
       }

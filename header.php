@@ -16,12 +16,9 @@
     <?php get_template_part('modules/header/top', 'bar'); ?>
     <?php get_template_part('modules/header/masthead'); ?>
 
-
 	<?php if( class_exists('rt_slider') ) {
 			 rt_slider::render('slider', 'nivo' ); 
 		} ?>
-	
-	
 
     <?php get_template_part('modules/hero/hero'); ?>
 	
