@@ -30,7 +30,7 @@
                 <?php endif; ?>
                 <?php if ( get_theme_mod('amora_hero1_button') != '') : ?>
                     <a href="<?php the_permalink(get_theme_mod('amora_hero1_selectpage')); ?>" class="more-button">
-                        <?php echo get_theme_mod('amora_hero1_button'); ?>
+                        <?php echo esc_html(get_theme_mod('amora_hero1_button')); ?>
                     </a>
                 <?php endif; ?>
             </div>
@@ -38,7 +38,7 @@
             <?php if(wp_get_attachment_url( get_post_thumbnail_id(get_theme_mod('amora_hero1_selectpage')) )):?>
             <div class="f-image col-md-4 col-sm-4">
                 <?php $a =  wp_get_attachment_url( get_post_thumbnail_id(get_theme_mod('amora_hero1_selectpage')) ); ?>
-                <a href="<?php the_permalink(get_theme_mod('amora_hero1_selectpage')); ?>"><img src="<?php echo $a; ?>"></a>
+                <a href="<?php the_permalink(esc_html(get_theme_mod('amora_hero1_selectpage'))); ?>"><img src="<?php echo $a; ?>" alt="<?php the_title() ?>"></a>
             </div>
             <?php endif;?>
         </div>

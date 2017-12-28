@@ -1,9 +1,14 @@
 /* Second Featured Area */
 .featposts {
   margin-top: 45px;
+  z-index: 0;
+  position: relative;
   @media screen and (max-width: 767px) { margin-top: 25px;}
   @media screen and (min-width: 767px){
     padding: 50px 0px;
+  }
+  .post-title-parent{
+    pointer-events: none;
   }
 
   .item {
@@ -13,23 +18,23 @@
     overflow: visible;
     @media screen and (min-width: 767px) {
       &:nth-of-type(1), &:nth-of-type(5) {
-        z-index: 777;
+        z-index: 444;
         &:hover{
-          z-index: 99999;
+          z-index: 666;
         }
       }
 
       &:nth-of-type(2), &:nth-of-type(4) {
-        z-index: 888;
+        z-index: 555;
         &:hover{
-          z-index: 99999;
+          z-index: 777;
         }
       }
 
       &:nth-of-type(3) {
-        z-index: 9999 !important;
+        z-index: 666;
         &:hover{
-          z-index: 99999;
+          z-index: 888;
         }
       }
 
@@ -79,7 +84,7 @@
     .item-container {
 
       margin-top: 30px;
-     // padding: 10px 10px;
+      // padding: 10px 10px;
       overflow: visible;
       .transition(0.8s all ease);
       //border: ridge 13px darken(@onaccent,10%);
@@ -91,7 +96,7 @@
     img {
       width: 100%;
       .transition(1s all ease);
-     // .transform(scale(1.02));
+      // .transform(scale(1.02));
       position: relative;
       .transition(0.4s all ease);
       transform-origin: initial;
@@ -116,23 +121,23 @@
       @media screen and (max-width: 767px) { padding-bottom: 15px;}
     }
     @media screen and (min-width: 767px){
-    &:hover {
-      .post-title {
-        opacity: 1;
-        .transform(translateY(0px) scale(1.05));
+      &:hover {
+        .post-title {
+          opacity: 1;
+          .transform(translateY(0px) scale(1.05));
 
-      }
-      img {
-        filter: brightness(1);
-        -webkit-filter: brightness(1);
-        z-index: 99999;
-        @media screen and (max-width: 767px){
-          transform: none;
-          -webkit-filter: none;
         }
+        img {
+          filter: brightness(1);
+          -webkit-filter: brightness(1);
+          z-index: 99999;
+          @media screen and (max-width: 767px){
+            transform: none;
+            -webkit-filter: none;
+          }
 
+        }
       }
-    }
     }
   }
 }

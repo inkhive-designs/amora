@@ -1,9 +1,9 @@
 .amora{
   overflow: hidden;
   margin: 10px 0;
-  padding: 10px !important;
+  padding: 10px;
   padding-bottom: 17px;
- @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     border-bottom: none;
   }
   &:nth-child(odd) {
@@ -48,11 +48,15 @@
     @media screen and (max-width: 768px) {
       padding: 10px 3px;
     }
-    h1 {
+    h3 {
       margin: 5px 0;
       margin-top: 1px;
+      margin-bottom: 5px;
       font-weight: normal;
       font-size: 19px;
+      border-bottom: 2px solid;
+      border-color: @accent;
+      padding: 10px 0px;
       a {
         color: darken(@content,25%);
         padding-bottom: 2px;
@@ -64,27 +68,6 @@
         }
       }
 
-    }
-    .postedon {
-      font-size: 12px;
-      color: #8890d5;
-      font-weight: lighter;
-      margin-bottom: 5px;
-      /* background: #d8dad7; */
-      padding: 10px 0px;
-      border-bottom: 2px solid;
-      .entry-date,.published,.author,.vcard{
-        color: darken(@accent,10%);
-        font-weight: bold;
-      }
-      .posted-on,.byline{
-        color: @accent;
-      }
-      a {
-        color: @accent;
-       // text-decoration: underline;
-
-      }
     }
     .entry-excerpt {
 
@@ -118,10 +101,10 @@
         bottom: -7px;
         transition: ease all;
       }
-     @media screen and (max-width: 767px){
-       bottom: 2px;
-       left: 3px;
-     }
+      @media screen and (max-width: 767px){
+        bottom: 2px;
+        left: 3px;
+      }
 
     }
   }

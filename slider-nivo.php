@@ -16,7 +16,7 @@ $count_x = $count = esc_html(rt_slider::fetch('count')); ?>
 				if ($img) :
 				?>
 				
-	            <a href="<?php echo $url; ?>"><img src="<?php echo $img ?>" title="#caption_<?php echo $i ?>" /></a>
+	            <a href="<?php echo $url; ?>"><img alt="<?php echo the_title() ?>" src="<?php echo $img ?>" title="#caption_<?php echo $i ?>" /></a>
 	            
              <?php
 	            endif;

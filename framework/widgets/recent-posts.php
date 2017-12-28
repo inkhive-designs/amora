@@ -53,7 +53,7 @@ class amora_Recent_Posts extends WP_Widget {
 		         <?php 
 		         else :
 		         ?>
-		         <div class='rp-thumb'><a href="<?php the_permalink(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/nthumb.png"></a></div>
+		         <div class='rp-thumb'><a href="<?php the_permalink(); ?>"><img alt=" <?php the_title() ?>" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/nthumb.png"></a></div>
 		         <?php
 		         endif; ?>	
 		         <div class='rp-title'><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>

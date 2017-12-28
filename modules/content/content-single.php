@@ -16,7 +16,7 @@
     </header><!-- .entry-header -->
 
     <div id="featured-image">
-        <?php the_post_thumbnail('full'); ?>
+        <?php the_post_thumbnail('full',array(  'alt' => get_the_title())); ?>
     </div>
 
 	<div class="entry-content">

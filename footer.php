@@ -16,7 +16,7 @@
 		<div class="site-info container">
 			<?php printf( __( 'Theme Designed by %1$s.', 'amora' ), '<a target="blank" href="'.esc_url("http://inkhive.com/").'" rel="nofollow">InkHive</a>' ); ?>
 			<span class="sep"></span>
-			<?php echo ( get_theme_mod('amora_footer_text') == '' ) ? ('&copy; '.date_i18n( __( 'Y', 'amora' ) ).' '.get_bloginfo('name').__('. All Rights Reserved. ','amora')) : esc_html(get_theme_mod('amora_footer_text')); ?>
+			<?php echo ( esc_html(get_theme_mod('amora_footer_text')) == '' ) ? ('&copy; '.date_i18n( __( 'Y', 'amora' ) ).' '.get_bloginfo('name').__('. All Rights Reserved. ','amora')) : esc_html(get_theme_mod('amora_footer_text')); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 	
