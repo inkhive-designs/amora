@@ -11,7 +11,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'amora' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'amora' ); ?></a>
     <?php get_template_part('modules/header/jumbosearch'); ?>
     <?php get_template_part('modules/header/top', 'bar'); ?>
     <?php get_template_part('modules/header/masthead'); ?>

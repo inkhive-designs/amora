@@ -77,7 +77,7 @@ if ( ! function_exists( 'amora_setup' ) ) :
             'default-image' => '',
         ) ) );
 
-        add_image_size('amora-pop-thumb',542, 542, true );
+        add_image_size('amora-pop-thumb',500, 500, true );
         add_image_size('amora-thumb',600, 600, true );
         add_image_size('amora-slider-thumb',860, 430, true );
     }

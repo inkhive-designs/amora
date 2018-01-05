@@ -16,9 +16,9 @@
 
     <div class="out-thumb col-md-8 col-sm-8">
         <header class="entry-header">
-            <h3 class="entry-title title-font"><a class="hvr-underline-reveal" href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+            <h3 class="entry-title title-font"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
             <span class="entry-excerpt"><?php the_excerpt(); ?></span>
-            <span class="readmore"><a class="hvr-sink" href="<?php the_permalink() ?>"><?php _e('Read More','amora'); ?></a></span>
+            <span class="readmore"><a class="hvr-sink" href="<?php the_permalink() ?>"><?php esc_html_e('Read More','amora'); ?></a></span>
         </header><!-- .entry-header -->
     </div><!--.out-thumb-->
 

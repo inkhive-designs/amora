@@ -24,7 +24,7 @@ $wp_customize->add_setting(
 );
 
 function amora_sanitize_blog_layout( $input ) {
-    if ( in_array($input, array('grid','amora') ) )
+    if ( in_array($input, array('grid','amora','grid_2_column','grid_3_column') ) )
         return $input;
     else
         return '';
@@ -39,7 +39,8 @@ $wp_customize->add_control(
         'choices' => array(
             'grid' => __('Basic Blog Layout','amora'),
             'amora'    => __('Amora Theme Layout','amora'),
-
+            'grid_2_column' => __('Grid - 2 Column', 'amora'),
+            'grid_3_column' => __('Grid - 3 Column', 'amora')
         )
     )
 );

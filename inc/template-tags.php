@@ -72,19 +72,19 @@ function amora_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'amora' ) );
 		if ( $categories_list && amora_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'amora' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'amora' ) . '</span>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'amora' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'amora' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'amora' ) . '</span>', $tags_list );
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'amora' ), __( '1 Comment', 'amora' ), __( '% Comments', 'amora' ) );
+		comments_popup_link( __( 'Leave a comment', 'amora' ), esc_html__( '1 Comment', 'amora' ), esc_html__( '% Comments', 'amora' ) );
 		echo '</span>';
 	}
 
@@ -135,7 +135,7 @@ function amora_comment( $comment, $args, $depth ) {
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 		<div class="comment-body">
-			<?php _e( 'Pingback:', 'amora' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'amora' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php esc_html_e( 'Pingback:', 'amora' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'amora' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
 
 	<?php else : ?>
@@ -156,7 +156,7 @@ function amora_comment( $comment, $args, $depth ) {
 				</div><!-- .comment-metadata -->
 
 				<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'amora' ); ?></p>
+				<p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'amora' ); ?></p>
 				<?php endif; ?>
 			</footer><!-- .comment-meta -->
 

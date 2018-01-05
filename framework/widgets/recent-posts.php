@@ -65,7 +65,7 @@ class amora_Recent_Posts extends WP_Widget {
 		   else: 
 		?>
 		
-		      <?php _e('Oops, there are no posts.','amora'); ?>
+		      <?php esc_html_e('Oops, there are no posts.','amora'); ?>
 		
 		<?php
 		   endif;
@@ -92,10 +92,10 @@ class amora_Recent_Posts extends WP_Widget {
 		}
 		?>
 		<p>
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:','amora' ); ?></label> 
+		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:','amora' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
 		
-		<label for="<?php echo $this->get_field_id( 'no_of_posts' ); ?>"><?php _e( 'No. of Posts:', 'amora' ); ?></label>
+		<label for="<?php echo $this->get_field_id( 'no_of_posts' ); ?>"><?php esc_html_e( 'No. of Posts:', 'amora' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'no_of_posts' ); ?>" name="<?php echo $this->get_field_name( 'no_of_posts' ); ?>" type="text" value="<?php echo esc_attr( $no_of_posts ); ?>" />
 		</p>
 		<?php 

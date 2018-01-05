@@ -15,7 +15,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-areas <?php do_action('amora_primary-width') ?>">
 		<?php if ( is_home() ) : ?>
-			<div class="section-title"><span><?php _e("From the Blog","amora"); ?></span></div> <?php
+			<div class="section-title"><span><?php esc_html_e("From the Blog","amora"); ?></span></div> <?php
 		endif; ?>
 		
 		<main id="main" class="site-main <?php do_action('amora_masonry_class') ?>" role="main">
