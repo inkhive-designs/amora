@@ -40,6 +40,10 @@ All Other Resources, apart from the ones mentioned above have been created by me
 
 ## Changelog
 
-### 3.0
+### Version 3.0
 
 * Re-Design
+
+### Version: 3.1
+
+* Minor featured areas bug fixed.

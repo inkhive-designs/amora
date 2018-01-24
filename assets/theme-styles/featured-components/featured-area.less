@@ -3,6 +3,9 @@
   margin-top: 45px;
   z-index: 0;
   position: relative;
+  .featposts-wrapper{
+    text-align: center;
+  }
   @media screen and (max-width: 767px) { margin-top: 25px;}
   @media screen and (min-width: 767px){
     padding: 50px 0px;
@@ -12,6 +15,8 @@
   }
 
   .item {
+    float: none;
+    display: inline-block;
     padding: 0px;
     position: relative;
     margin-bottom: 0;
@@ -138,6 +143,12 @@
 
         }
       }
+    }
+    @media screen and (min-width: 767px)and (max-width: 991px){
+      &:hover {
+        .post-title {
+          font-size: 11px;
+        }}
     }
   }
 }
