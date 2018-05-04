@@ -1,6 +1,12 @@
 <?php
 //Settings for Header Image
 function amora_customize_register_header( $wp_customize ) {
+    $wp_customize->add_panel( 'amora_header_panel', array(
+        'priority'       => 2,
+        'capability'     => 'edit_theme_options',
+        'theme_supports' => '',
+        'title'          => __('Header Settings','amora'),
+    ) );
 $wp_customize->add_setting( 'amora_himg_style' , array(
     'default'     => 'cover',
     'sanitize_callback' => 'amora_sanitize_himg_style'

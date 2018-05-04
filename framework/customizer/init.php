@@ -12,6 +12,9 @@
 function amora_customize_register( $wp_customize ) {
     $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
     $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+    $wp_customize->get_section( 'header_image' )->panel  = 'amora_header_panel';
+    $wp_customize->get_section( 'colors' )->panel  = 'amora_design_panel';
+    $wp_customize->get_section( 'background_image' )->panel  = 'amora_design_panel';
 
 }
 add_action( 'customize_register', 'amora_customize_register' );

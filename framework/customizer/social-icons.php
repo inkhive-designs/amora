@@ -4,6 +4,7 @@ function amora_customize_register_social( $wp_customize ) {
 $wp_customize->add_section('amora_social_section', array(
     'title' => __('Social Icons','amora'),
     'priority' => 44 ,
+    'panel'   => 'amora_header_panel'
 ));
 
 $social_networks = array( //Redefinied in Sanitization Function.

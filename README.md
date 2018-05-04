@@ -47,3 +47,7 @@ All Other Resources, apart from the ones mentioned above have been created by me
 ### Version: 3.1
 
 * Minor featured areas bug fixed.
+
+### Version: 3.1.1
+
+* Minimize Customizer

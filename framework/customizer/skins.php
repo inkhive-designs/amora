@@ -4,6 +4,7 @@ function amora_customize_register_skins( $wp_customize ) {
 $wp_customize->add_section( 'title_tagline' , array(
     'title'      => __( 'Title, Tagline & Logo', 'amora' ),
     'priority'   => 30,
+    'panel' => 'amora_header_panel'
 ) );
     function amora_logo_enabled($control) {
     $option = $control->manager->get_setting('custom_logo');

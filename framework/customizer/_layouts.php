@@ -2,7 +2,7 @@
 // Layout and Design
 function amora_customize_register_layouts( $wp_customize ) {
 $wp_customize->add_panel( 'amora_design_panel', array(
-    'priority'       => 40,
+    'priority'       => 3,
     'capability'     => 'edit_theme_options',
     'theme_supports' => '',
     'title'          => __('Design & Layout','amora'),

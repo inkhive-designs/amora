@@ -6,6 +6,7 @@ $wp_customize->add_section(
     array(
         'title'     => __('Google Web Fonts','amora'),
         'priority'  => 41,
+        'panel'     => 'amora_design_panel'
     )
 );
 
