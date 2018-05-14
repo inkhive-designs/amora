@@ -51,3 +51,8 @@ All Other Resources, apart from the ones mentioned above have been created by me
 ### Version: 3.1.1
 
 * Minimize Customizer
+
+### Version: 3.1.2
+
+* Skins added.
+* Minor CSS bug fixed.

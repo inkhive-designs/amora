@@ -19,7 +19,7 @@ function amora_scripts() {
 
     wp_enqueue_style( 'hover-style', get_template_directory_uri() . '/assets/css/hover.min.css' );
 
-    wp_enqueue_style( 'amora-main-theme-style', get_template_directory_uri() . '/assets/theme-styles/css/default.css');
+    wp_enqueue_style( 'amora-main-theme-style', get_template_directory_uri() . '/assets/theme-styles/css/'.get_theme_mod('amora_skin', 'default').'.css', array(), filemtime( get_template_directory() . '/assets/theme-styles/css/'.get_theme_mod('amora_skin', 'default').'.css' ) );
 
     wp_enqueue_script( 'amora-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

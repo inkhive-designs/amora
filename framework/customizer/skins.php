@@ -29,5 +29,48 @@ $wp_customize->add_control(new WP_Customize_Color_Control(
         'type' => 'color'
     ) )
 );
+//Skins
+    //Select the Default Theme Skin
+    $wp_customize->add_section(
+        'amora_skin_options',
+        array(
+            'title' => __('Theme Skins', 'amora'),
+            'priority' => 39,
+            'panel'   => 'amora_design_panel'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'amora_skin',
+        array(
+            'default' => 'default',
+            'sanitize_callback' => 'amora_sanitize_skin'
+        )
+    );
+
+    $skins = array('default' => __('Default(Blue)', 'amora'),
+        'red' => __('Roman', 'amora'),
+        'pink' => __('Sweet Pink', 'amora'),
+        'caribbean-green' => __('Caribbean Green', 'amora'),
+
+    );
+
+    $wp_customize->add_control(
+        'amora_skin', array(
+            'settings' => 'amora_skin',
+            'section' => 'amora_skin_options',
+            'label' => __('Choose from the Skins Below', 'amora'),
+            'type' => 'select',
+            'choices' => $skins,
+        )
+    );
+
+    function amora_sanitize_skin($input)
+    {
+        if (in_array($input, array('default', 'red', 'caribbean-green','pink')))
+            return $input;
+        else
+            return '';
+    }
 }
 add_action( 'customize_register', 'amora_customize_register_skins' );

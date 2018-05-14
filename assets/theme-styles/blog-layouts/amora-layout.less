@@ -86,7 +86,10 @@
       background: @accent;
       color: @onaccent;
       padding: 10px;
-    }
+      @media screen and (max-width: 767px) {
+        transform: none;
+      }
+      }
     &:before{
       content: "";
       border-top: solid 8px @accent;
@@ -97,9 +100,11 @@
       position: absolute;
       bottom: -8px;
       left: 15px;
-      &:hover{
-        bottom: -7px;
-        transition: ease all;
+      @media screen and (min-width: 767px) {
+        &:hover {
+          bottom: -7px;
+          transition: ease all;
+        }
       }
       @media screen and (max-width: 767px){
         bottom: 2px;
