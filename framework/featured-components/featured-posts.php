@@ -1,7 +1,7 @@
 <?php
 if ( (get_theme_mod('amora_featposts_enable') && is_home()) || get_post_meta(get_the_id())): ?>
 
-    <div class="featposts container-fluid container">
+    <div id="featured" class="featposts container-fluid container">
         <?php if(get_theme_mod('amora_featposts_title'))?>
         <div class="section-title">
         <span><?php

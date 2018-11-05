@@ -6,6 +6,9 @@
   z-index: 90;
   clear: both;
   min-height: 400px;
+  @media screen and (max-width: 991px) {
+    min-height: 300px;
+  }
   .layer {
     background: fade(black, 0%);
   }
@@ -28,7 +31,7 @@
       text-align: center;
       float: none;
       padding-bottom: 5px;
-      margin-top: 70px;
+      margin: 70px;
     }
   }
   h1.site-title {
