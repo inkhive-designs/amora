@@ -62,7 +62,7 @@ function amora_customize_register_social( $wp_customize ) {
             'google-plus',
             'instagram',
             'rss',
-            'vine',
+            'pinterest-p',
             'vimeo-square',
             'youtube',
             'flickr'
